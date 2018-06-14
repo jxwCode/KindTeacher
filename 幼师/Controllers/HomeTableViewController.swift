@@ -18,7 +18,7 @@ class HomeTableViewController: UITableViewController {
         self.tableView.register(HomeCell.initNib(), forCellReuseIdentifier: HomeCell.reuseId)
         self.loadData()
     }
-    
+    //加载首页数据
     func loadData(){
         NetWorkTool.getHomeData(withUrl: "http://static.youshikoudai.com/mockapi/data") { [weak self](data) in
             self?.dataArray = data
